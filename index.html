@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- Das ist ein Kommentar -->
-<html>
+<html lang="de">
   <head>
     <meta charset="utf-8">
     <title>Kochen 2.0 | Wie lecker ist das denn?</title>
@@ -8,6 +8,8 @@
     <meta name="description" content="Bla bla">
     <meta name="robots" content="index,follow">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icons.css">
   </head>
   <body>
     <!-- Jetzt kommt der Header -->
@@ -124,10 +126,10 @@
         <section class="search">
           <h2>Finde dein Rezept</h2>
           <form class="searchform" action="https://www.google.de/search" method="get">
-            	<input type="search" name="q" value="" placeholder="Mmmmmmhh...">
+            	<input type="search" name="q" value="" placeholder="Mmmmmmhh..." id="searchvalue">
 
-              <button type="submit" name="button">
-                <span>Suchen</span>
+              <button type="submit" name="button" id="searchbutton">
+                <span class="icon-search"></span>
               </button>
 
           </form>
@@ -153,12 +155,57 @@
 
     </div>
 
-    <script type="text/javascript">
-      var b = document.getElementById("sound");
-      b.addEventListener("click", function(e){
-        //e.preventDefault;
 
+    <footer>
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
+            <li>
+              <a href="#">Impressum</a>
+            </li>
+            <li>
+              <a href="#">Datenschutz</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul id="social">
+          <li>
+            <a href="https://facebook.com/" class="icon-facebook" target="_blank">
+            </a>
+          </li>
+
+          <li>
+            <a href="https://facebook.com/" class="icon-youtube" target="_blank">
+            </a>
+          </li>
+
+          <li>
+            <a href="https://facebook.com/" class="icon-instagram" target="_blank">
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </footer>
+    <script type="text/javascript">
+      var b = document.getElementById("searchbutton");
+      b.addEventListener("click", function(e){
+        e.preventDefault();
+        var a = new Audio('mmmh.mp3');
+        a.play();
+        a.onended = function() {
+            var q = document.getElementById("searchvalue").value;
+            window.location.href = 'http://www.google.com' + '/search?q=' + q;
+        };
       });
-    </script>
+  </script>
+
+
+
   </body>
 </html>
