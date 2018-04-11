@@ -3,21 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Kochen 2.0 | Startseite</title>
-    <meta name="description" content="Eine Seite über das Kochen">
-    <!-- Das ist ein Kommentar -->
+    <meta name="description" content="bla bla">
+    <!-- Meta viewport braucht man  für responsive Webdesign -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icons.css">
   </head>
 
   <body>
     <header>
       <div class="wrapper">
         <a href="index.html">
-          <!-- Name/Element(jpg) des Links -->
-          <img id="logo" src="img/logo.svg" alt="Kochmütze mit Sonnenbrille">
+          <img id="logo" src="img/logo.svg" alt="Logo Kochen 2.0">
         </a>
 
+        <button id="burger">
+          <span class="icon-menu"></span>
+        </button>
         <nav id="menu">
           <ul>
             <li>
@@ -27,9 +31,8 @@
             <li>
               <a href="#">Rezepte</a>
             </li>
-
             <li>
-              <a href="#">Über uns</a>
+              <a href="#">Über Uns</a>
             </li>
 
             <li>
@@ -40,5 +43,160 @@
 
       </div>
     </header>
+
+    <div class="intro">
+      <div class="introtext">
+        <h1>Die besten Rezepte für Webworker</h1>
+        <p>Es gibt mehr Pizza & Ravioli</p>
+        <a href="#main" class="button">Entdecke die Leckereien</a>
+      </div>
+    </div>
+
+  <div class="wrapper">
+    <main id="main">
+      <h2>Die neuesten Rezepte</h2>
+
+    <div class="row">
+
+      <article class="card">
+        <img src="img/farfalle.jpg" alt="Farfalle mit Pesto">
+
+        <div class="teaser">
+          <h3>Farfalle mit Pesto</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <a class="button" href="#">Zum Rezept</a>
+        </div>
+      </article>
+
+      <article class="card">
+          <img src="img/reispfanne-lissabon.jpg" alt="Reispfanne Lissabon">
+          <div class="teaser">
+            <h3>Reispfanne Lissabon</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="button" href="#">Zum Rezept</a>
+          </div>
+        </article>
+
+    </div>
+
+    <div class="row">
+      <article class="card">
+        <img src="img/kuerbissuppe.jpg" alt="Kürbissuppe">
+
+        <div class="teaser">
+          <h3>Kürbissuppe</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <a class="button" href="#">Zum Rezept</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/burger.jpg" alt="Burger">
+
+        <div class="teaser">
+          <h3>Veggie-Burger</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <a class="button" href="#">Zum Rezept</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="row">
+      <article class="card">
+        <img src="img/toast-mit-ei.jpg" alt="Toast mit Ei">
+
+        <div class="teaser">
+          <h3>Toast mit Ei</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <a class="button" href="#">Zum Rezept</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/pancakes.jpg" alt="Pancakes">
+
+        <div class="teaser">
+          <h3>Pancakes</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <a class="button" href="#">Zum Rezept</a>
+        </div>
+      </article>
+
+    </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="suche">
+        <h2>Finde Dein Rezept</h2>
+        <form class="searchbar" action="https://www.google.de/search" target="_blank" method="get">
+          <input type="search" name="q" value="" placeholder="Mmmmmh..." >
+          <button type="submit" name="button" class="icon-search"></button>
+        </form>
+      </div>
+
+      <div class="autor">
+        <img src="img/koch.jpg" alt="Froschkoch">
+        <h2>Hier kocht der Chef</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="affiliate">
+        <h2>Keine Lust zu kochen?</h2>
+        <img src="img/ravioli.jpg" alt="kitchen">
+        <p>Hier gibt es leckere Dosen: </p>
+        <a href="https://www.amazon.de/b?ie=UTF8&node=6723195031" target="_blank">
+          <img src="img/amazon-fresh.gif" alt="amazon">
+        </a>
+      </div>
+    </aside>
+</div>
+
+<footer>
+  <div class="wrapper">
+
+      <ul class="footermenu">
+        <li>
+          <a href="#">Impressum</a>
+        </li>
+
+        <li>
+          <a href="#">Datenschutz</a>
+        </li>
+
+        <li>
+          <a href="#">Kontakt</a>
+        </li>
+      </ul>
+
+      <ul class="social">
+        <li>
+          <a class="icon-facebook" href="https://www.facebook.com/" target="_blank"></a>
+        </li>
+
+        <li>
+          <a class="icon-youtube" href="https://www.youtube.com/?gl=DE&hl=de" target="_blank"></a>
+        </li>
+
+        <li>
+          <a class="icon-instagram" href="https://www.instagram.com/?hl=de" target="_blank"></a>
+        </li>
+      </ul>
+
+  </div>
+
+</footer>
+
+
+
+
+
+
+    <script type="text/javascript">
+    document.getElementById('burger').addEventListener('click', function(){
+      document.getElementById('menu').classList.toggle('show');
+    });
+    </script>
+
   </body>
 </html>
